@@ -2,7 +2,7 @@
 
 **studentDepressionR** is a production-style R package that analyzes student well-being data and builds predictive models for depression risk. It emphasizes transparent EDA, reproducible preprocessing, multiple model families (Decision Tree, Logistic Regression, Random Forest, SVM-Radial, Neural Net), unsupervised k-means clustering, and concise stage reports with metrics and figures.
 
-> Objective: demonstrate a rigorous end-to-end data science workflow—clear EDA, fair model comparison, and human-readable insights—presented as a clean portfolio project.
+> Objective: demonstrate a rigorous end-to-end data science workflow—clear EDA, fair model comparison, and human-readable insights—
 
 ---
 
@@ -10,20 +10,24 @@
 
 ```mermaid
 flowchart TD
-    A[Raw Dataset<br/>student well-being records] --> B[EDA & Profiling<br/>class balance • per-feature distributions • correlation map • density ridge]
-    B --> C[Preprocessing<br/>one-hot encoding • range scaling • sleep duration → numeric hours • minimal imputation]
-    C --> D1[Stage 1: Decision Tree<br/>cv-tuned cp • tree plot • ROC/AUC • confusion matrix]
-    C --> D2[Stage 2a: K-Means Clustering<br/>elbow & silhouette • k selection • cluster profiles • scatter maps]
-    C --> D3[Stage 2b: Neural Network (nnet)<br/>size/decay tuning • ROC/AUC • calibration]
-    C --> E[Stage 3: Model Comparison<br/>Logistic • RF • SVM-Radial • NNet<br/>5-fold CV (ROC) • test metrics table]
-    E --> F[Explainability<br/>RF importance • partial dependence]
-    D1 --> G[Stage Reports<br/>per-stage markdown summaries]
-    D2 --> G
-    D3 --> G
+    A["Raw Dataset<br/>student well-being records"] --> B["EDA & Profiling<br/>class balance · per-feature distributions · correlation map · density ridge"]
+    B --> C["Preprocessing<br/>one-hot encoding · range scaling · sleep duration -> numeric hours · minimal imputation"]
+
+    C --> D1["Stage 1 — Decision Tree<br/>cv-tuned cp · tree plot · ROC/AUC · confusion matrix"]
+    C --> D2a["Stage 2a — K-Means Clustering<br/>elbow & silhouette · K selection · cluster profiles · scatter maps"]
+    C --> D2b["Stage 2b — Neural Network (nnet)<br/>size/decay tuning · ROC/AUC · calibration"]
+    C --> E["Stage 3 — Model Comparison<br/>Logistic · Random Forest · SVM-Radial · Neural Net<br/>5-fold CV (ROC) · test metrics table"]
+
+    E --> F["Explainability<br/>RF importance · partial dependence"]
+
+    D1 --> G["Stage Reports<br/>per-stage markdown summaries"]
+    D2a --> G
+    D2b --> G
     E --> G
     F --> G
-    G --> H[Insights & Takeaways<br/>patterns • tradeoffs • limitations]
-```
+
+    G --> H["Insights & Takeaways<br/>patterns · tradeoffs · limitations"]
+
 
 ---
 
@@ -113,5 +117,5 @@ This project is not a clinical instrument. Any operational deployment should inv
 
 ## Maintainer & License
 
-**Vigya Awasthi** — Data & ML · Austin, TX  
+**Vigya Awasthi** — Data & ML ·  
 Released under the **MIT License**.
