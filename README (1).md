@@ -4,8 +4,9 @@
 
 > Objective: demonstrate a rigorous end-to-end data science workflow—clear EDA, fair model comparison, and human-readable insights—
 
----
 ## Project flow (single visual)
+
+```mermaid
 flowchart TD
   A[Raw dataset - student well-being records] --> B[EDA and profiling - class balance, distributions, correlation, ridge]
   B --> C[Preprocessing - one-hot encoding, scaling, sleep to hours, minimal imputation]
@@ -24,7 +25,6 @@ flowchart TD
   F --> G
 
   G --> H[Insights and takeaways - patterns, tradeoffs, limitations]
----
 
 ## Highlights
 
