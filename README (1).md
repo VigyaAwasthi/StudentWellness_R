@@ -4,28 +4,6 @@
 
 > Objective: demonstrate a rigorous end-to-end data science workflow—clear EDA, fair model comparison, and human-readable insights—
 
-## Project flow (single visual)
-
-```mermaid
-flowchart TD
-  A[Raw dataset - student well-being records] --> B[EDA and profiling - class balance, distributions, correlation, ridge]
-  B --> C[Preprocessing - one-hot encoding, scaling, sleep to hours, minimal imputation]
-
-  C --> D1[Stage 1 - Decision Tree - tuned cp, tree plot, ROC/AUC, confusion matrix]
-  C --> D2a[Stage 2a - K-Means - elbow, silhouette, K selection, cluster profiles, scatter maps]
-  C --> D2b[Stage 2b - Neural Network (nnet) - size and decay tuning, ROC/AUC, calibration]
-  C --> E[Stage 3 - Model comparison - Logistic, Random Forest, SVM-Radial, Neural Net, 5-fold CV ROC, test metrics]
-
-  E --> F[Explainability - RF importance, partial dependence]
-
-  D1 --> G[Stage reports - per-stage markdown summaries]
-  D2a --> G
-  D2b --> G
-  E --> G
-  F --> G
-
-  G --> H[Insights and takeaways - patterns, tradeoffs, limitations]
-
 ## Highlights
 
 - **Expressive EDA**: class balance, per-feature distributions across labels, correlation heatmap, density-ridge overlays.  
