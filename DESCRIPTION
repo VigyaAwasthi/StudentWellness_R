@@ -1,0 +1,33 @@
+Package: studentDepressionR
+Title: Student Depression Modeling and Clustering
+Version: 0.1.0
+Authors@R: person(given = "Vigya", family = "Awasthi", email = "vigya@example.com", role = c("aut","cre"))
+Description: An end-to-end workflow for EDA, preprocessing, supervised modeling (Decision Tree, Logistic Regression, SVM, Random Forest, Neural Net), and unsupervised clustering (K-Means) on a student well-being dataset. Includes helpers for plotting, cross-validation, and reporting.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports:
+    stats,
+    utils,
+    graphics,
+    grDevices,
+    methods,
+    tidyverse,
+    caret,
+    rpart,
+    rpart.plot,
+    pROC,
+    corrplot,
+    ggridges,
+    randomForest,
+    e1071,
+    nnet,
+    factoextra,
+    gridExtra,
+    pdp
+Suggests:
+    knitr,
+    rmarkdown,
+    devtools,
+    pkgdown
+VignetteBuilder: knitr
